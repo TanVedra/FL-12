@@ -1,10 +1,10 @@
-.tm-sidebar,
 section,
-div#home {
+body>div:first-child>div:first-child,
+div.tm-main-content>div:first-child {
     box-shadow: 0 0 8px 1px rgba(61, 55, 61, 0.7);
 }
 
-.tm-nav-item-link:hover {
+body>div:first-child>div:first-child a:hover {
     color: #fff;
     background-color: lightskyblue;  
 }
@@ -19,40 +19,20 @@ div#home {
 
 .tm-banner-inner p {
     text-shadow: 5px 5px 3px #333;       
-    animation: move 1.2s 1 ease;     
+    animation: move 2.2s 1 ease;     
 }
 
 @keyframes move {
-    from {padding-left: 200px;}
-    5% {padding-left: 190px;}
-    10% {padding-left: 180px;}
-    15% {padding-left: 170px;}    
-    20% {padding-left: 160px;}
-    25% {padding-left: 150px;}
-    30% {padding-left: 140px;}
-    35% {padding-left: 130px;}
-    40% {padding-left: 120px;}
-    45% {padding-left: 110px;}
-    50% {padding-left: 100px;}
-    55% {padding-left: 90px;}
-    60% {padding-left: 80px;}
-    65% {padding-left: 70px;}
-    70% {padding-left: 60px;}
-    75% {padding-left: 50px;}
-    80% {padding-left: 40px;}
-    85% {padding-left: 30px;}
-    90% {padding-left: 20px;}
-    95% {padding-left: 10px;}
-    to {padding-left: 0px;}
+    from {transform: translateX(200px);}
+    to {transform: translateX(0);}    
 }
 
-div.tm-content-box.flex-2-col {
+body>div:first-child>div:nth-child(2)>section:nth-child(2)>div:first-child {
     display: flex;
     position: relative;   
 }
 
-#tmCarousel,
-.padding-medium.flex-item.tm-team-description-container,
+body>div:first-child>div:nth-child(2)>section:nth-child(4)>div:first-child,
 section.tm-content-box {
     position: relative;
     overflow: hidden;
@@ -80,10 +60,9 @@ section.tm-content-box::before {
     flex-direction: column;
 }
 
-div.tm-content-box>div.padding-medium>h2.tm-section-title,
-section.heading h2 {
+body>div:first-child>div:nth-child(2)>section:nth-child(3) h2 {
     text-align: center;
-    color: lightskyblue;
+    color: lightskyblue;      
 }
 
 .tm-nav-item-link,
@@ -223,34 +202,34 @@ input#contact_email.form-control:focus {
         display: none;
     }
 
-    html>body,
-    body>div.container,
-    body>div.tm-main-content,
-    body>div.tm-main-content>div#home>div.tm-banner,
+    html,
+    body,
+    body>div,
+    body>div>div:nth-child(2),
+    body>div>div:nth-child(2)>div,
     .tm-content-box,
     .padding-medium,
     #tmCarousel {
         padding: 0;
-        margin: 0;        
+        margin: 0; 
     }
 
-    #tmCarousel {
-        margin: 0;
-        padding: 0 50px;
+    p {
+        margin-bottom: 0.9rem;
+    }
+
+    #tmCarousel {        
+        padding: 0 30px;
     }
 
     h2,
     section.blocks>div.tm-team-description-container>h2.tm-section-title {
         text-transform: uppercase;   
-        text-align: center;     
+        text-align: center;
+        font-weight: 100;     
     }
-
-    html>body {
-        margin-top:-100px;
-    }
-
-    section>div.tm-content-box.flex-2-col,
-    section.blocks>div.padding-medium {
+    
+    section>div.tm-content-box.flex-2-col {    
         display: flex;
         justify-content: center;        
     }
@@ -259,11 +238,11 @@ input#contact_email.form-control:focus {
         margin-left: 30px;
         padding: 0 10px;
     }
-
+    
     div.tm-team-description-container {
         max-width: 90%;
     }
-
+    
     p.tm-section-description {
         text-indent: 0;
         text-align: center;
@@ -286,5 +265,5 @@ input#contact_email.form-control:focus {
     div.padding-medium>h2+ol>li:first-child::after,
     div.padding-medium>h2+ol>li:nth-child(3)::after {
         content: none;
-    }
+    }   
 }
