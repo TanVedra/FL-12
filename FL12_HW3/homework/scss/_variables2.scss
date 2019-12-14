@@ -1,0 +1,26 @@
+$source: 'Source Sans Pro', sans-serif;
+$hind: 'Hind', sans-serif;
+$fresca: 'Fresca', sans-serif;
+
+$font-family: (
+    source: $source,
+    hind: $hind,
+    fresca: $fresca
+);
+
+$bg-image: url("../img/m-h-night.jpg") no-repeat;
+$main-font-family: $fresca;
+$start-point: relative;
+$logo-padding: 2px;
+$card-text-padding: 40px 136px 0px 110px;
+$body-bgcolor: #21232E;
+$selection-color: #FF4E33;
+$main-text-color: #fff;
+$button-color: #fff;
+$card-title-color: #fff;
+$header-ancher-color: #fff;
+$text-color: #BBBBBA;
+$button-bgcolor: #E3AC00;
+$card-bgcolor: #3B3F50;
+$footer-bgcolor: #3B3F50;
+$banner-bgcolor: linear-gradient(90deg, rgb(223,166,4) 10%, rgb(147,46,82) 100%);

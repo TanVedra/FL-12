@@ -1,0 +1,280 @@
+@mixin logo-set {
+    display: flex;
+    padding: 0;             
+
+    img {            
+        margin-right: 12px;
+        width: 45px;
+        height: 45px;       
+    }
+
+    p {        
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 20px;
+        padding-top: 6px;        
+
+        span {
+            display: block;
+            font-size: 12px;
+            padding-left: $logo-padding;                
+        }
+    }
+}
+
+@mixin button-style {
+    background-color: $button-bgcolor;
+    border: none;
+    color: $button-color;
+    font-family: map-get($font-family , source);
+    font-size: 18px;
+    font-weight: bold;    
+    height: 45px;
+    width: 136px;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($button-bgcolor, 10%);
+        color: darken($button-color, 30%);
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+@mixin card-links {
+    color: $text-color;
+    font-family: $main-font-family;    
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        color: darken($text-color, 20%);
+    }
+}
+
+.central-block {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    max-width: 1920px;
+    color: $main-text-color;
+    background-color: $body-bgcolor;
+    font-family: $main-font-family;
+}
+ 
+.landing-logo {
+     @include logo-set;
+}
+ 
+header {
+    background: $bg-image;
+    background-size: 100% 100%;    
+    border-radius: 0 0 600px/300px;
+    padding-top: 20px;
+    padding-left: 190px;    
+     
+    &:before {
+        content: "";
+        position: absolute;
+        width: 278px;
+        height: 50px;
+        top: 232px;
+        background-color: $selection-color;  
+    }
+ 
+    .header_heading {          
+        line-height: 1.1em;
+        font-size: 66px;
+        font-weight: 900;    
+        font-family: map-get($font-family , source);    
+        position: $start-point;       
+        margin: 72px 0 32px;
+        width: 448px;                   
+    }
+ 
+    .header_text {
+        margin-left: -60px;
+        margin-bottom: 30px;
+        white-space: pre;
+    }
+    
+    p+div {
+        display: flex;
+        width: 472px;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 172px;
+ 
+        .header_button {
+            @include button-style;
+        }
+ 
+        .login {
+            font-size: 20px;
+            color: $header-ancher-color;    
+            font-family: map-get($font-family , source);
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                color: darken($header-ancher-color, 30%);
+            }
+        }
+    }    
+}
+ 
+ main.section {
+    position: $start-point;
+    font-family: map-get($font-family , source);
+
+    &:after {
+        content: "";
+        background-color: $selection-color;
+        height: 40px;
+        width: 180px;
+        position: absolute;
+        right: 572px;
+        top: 2px;
+    }   
+ 
+    .section_text {       
+        font-weight: 600;
+        font-size: 40px;              
+        position: relative;
+        margin: 40px 0;
+        text-align: center;
+        z-index: 10;        
+    }
+ 
+    .section_card {
+        background-color: $card-bgcolor;
+        max-width: 1060px;
+        height: 310px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        border-radius: 5px;
+        display: flex;
+
+        .section_card_img {
+            padding: 20px;
+            border-radius: 24px;            
+        }
+
+        img[alt="experts"] {
+            flex: 9;
+        }
+
+        img[alt="content formats"] {
+            flex: 8;
+        }
+
+        img[alt="certificate"] {
+            flex: 10;
+        }
+
+        .section_card_right_container {
+            flex: 10;            
+            color: $card-title-color;
+            text-align: center;            
+            padding: $card-text-padding;            
+
+            .section_card_heading {
+                font-weight: bold;
+                font-size: 22px;                                
+            }
+
+            .section_card_text {
+                text-align: justify;
+                font-size: 15px;
+                font-family: $main-font-family;
+                word-wrap: break-word;
+                margin: 40px 0;                
+                color: $text-color;                
+            }
+            .section_link {
+                @include card-links;
+            }
+        }
+    }   
+ 
+    .section_banner {
+        @extend .central-block;
+        height: 140px;
+        width: 1120px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 6px;
+        background: $banner-bgcolor;        
+        bottom : -230px;        
+        z-index: 10;
+         
+        &:before {
+            content: "";
+            background-color: $selection-color;
+            left: 260px;
+            top: 16px;    
+            width: 56px;
+            height: 50px;
+            position: absolute; 
+        }
+ 
+        .section_banner_heading {
+            font-size: 26px;
+            font-family: map-get($font-family, source);
+            font-weight: bold;
+            position: $start-point;
+            margin: 0 0 10px;
+        }
+ 
+        .section_banner_text {
+            color: $text-color;
+            font-family: $main-font-family;
+            margin: 0;
+        }
+ 
+        .section_banner_button {
+            @include button-style;            
+        }
+    }    
+}
+ 
+ footer {
+    background-color: $footer-bgcolor;    
+    margin-top: 160px;
+    padding: 0 30px;       
+
+    .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 136px;
+        padding-bottom: 40px;        
+        color: $text-color;
+
+        .footer_logo {
+            padding-left: 20px;
+        }
+
+        .footer_text {
+            width: 320px;
+            font-size: 15px;
+            margin: 0;           
+        }
+
+        .footer-cr {
+            margin-top: 20px;
+        }
+    }    
+ }

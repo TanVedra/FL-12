@@ -1,0 +1,26 @@
+$source: 'Source Sans Pro', sans-serif;
+$hind: 'Hind', sans-serif;
+$fresca: 'Fresca', sans-serif;
+
+$font-family: (
+    source: $source,
+    hind: $hind,
+    fresca: $fresca
+);
+
+$bg-image: url("../img/m-h-day.jpg") no-repeat;
+$main-font-family: $hind;
+$start-point: relative;
+$logo-padding: 6px;
+$card-text-padding: 30px 120px 46px 92px;
+$selection-color: #14A0C7;
+$main-text-color: #000;
+$body-bgcolor: #fff;
+$button-color: #fff;
+$card-title-color: #fff;
+$header-ancher-color: #fff;
+$text-color: #C0C3CE;
+$button-bgcolor: #699900;
+$card-bgcolor: #21232E;
+$footer-bgcolor: #21232E;
+$banner-bgcolor: linear-gradient(90deg, rgb(103,151,4) 10%, rgb(46,93,210) 100%);
