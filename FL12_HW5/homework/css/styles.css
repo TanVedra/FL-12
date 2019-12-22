@@ -1,0 +1,434 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+} */
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #9d27b0;
+}
+.post-2 {
+	background: #9bb800;
+}
+.post-3 {
+	background: #ed5120;
+}
+.post-4 {
+	background: #9d27b0;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+
+body {  
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1400px;
+  background-color: #0b192f;
+  color: #fff;
+  font-weight: lighter;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 40px;
+  margin: 0;
+}
+
+p{
+  line-height: 1.65em;
+}
+
+.header-menu {
+  width: 100%;  
+  background-color: #024161;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;  
+}
+
+.menu-hamburger {
+  display: none;
+}
+
+.menu-hamburger span {
+  display: block;
+  width: 26px;
+  height: 1px;
+  margin-bottom: 5px;   
+  background: #fff;
+  border-radius: 3px;  
+}
+
+.header-menu-nav {
+  margin-right: 20px;
+}
+
+.header-menu-logo,
+.header-menu-nav-item {
+  color: #fff;
+  text-decoration: none;
+  line-height: 70px;  
+}
+
+.header-menu-logo {
+  font-size: 24px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+.header-menu-logo>span {
+  color: #d12767;
+}
+
+.header-menu-nav-item {
+  font-size: 12px; 
+  width: 70px;
+  box-sizing: border-box;
+  height: 70px;
+  display: inline-block;  
+  text-align: center;  
+  transition: all 0.3s ease-in;
+}
+
+.header-menu-nav-item:hover {
+  background-color: #1f52a4;
+}
+
+.header-image {
+  background: url(../img/post0.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  height: 400px;
+  position: relative;
+}
+
+.header-post {
+  position: absolute;
+  width: 60%;
+  bottom: 20px;
+  left: 20px;
+}
+
+.content {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.content-right-side {
+  width: 25%;
+  margin-left: 14px;  
+}
+
+.news-image {
+  width: 100%;  
+}
+
+article[class^=news] {
+  color: #000;
+  background-color: #fff;
+}
+
+.news-title {
+  font-size: 30px;
+  margin: 20px 20px 0;
+}
+
+.news-text {
+  font-size: 14px;
+  margin: 0 20px 14px;
+  padding: 10px 0 20px;
+}
+
+.content-left-side {  
+  display: flex;
+  flex-direction: column-reverse;
+  width: 75%;  
+}
+
+.content-left-side article {
+  position: relative; 
+  display: flex;   
+}
+
+.content-left-side article:nth-child(even) {  
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.content-left-side article:nth-child(odd) {
+  text-align: left;
+}
+
+.post-image {
+  width: 49.8%;
+  cursor: pointer;
+}
+
+.post-1 .post-image-hover {
+  background-color: rgba(157, 39, 176, 0.2);
+}
+
+.post-2 .post-image-hover {
+  background-color: rgba(155, 184, 0, 0.2);
+}
+
+.post-3 .post-image-hover {
+  background-color: rgba(237, 81, 32, 0.2);
+}
+
+.post-4 .post-image-hover {
+  background-color: rgba(157, 39, 176, 0.2);
+}
+
+.post-image-hover {  
+  width: 100%;
+  height: 100%;  
+  opacity: 0;
+}
+
+.post-image-hover:hover {
+  opacity: 1;
+}
+
+article.post-1 .post-image {
+  background: url(../img/post1.jpg) no-repeat center/cover;  
+}
+
+article.post-2 .post-image {
+  background: url(../img/post2.jpg) no-repeat center/cover;  
+}
+
+article.post-3 .post-image {
+  background: url(../img/post3.jpg) no-repeat center/cover;  
+}
+
+article.post-4 .post-image {
+  background: url(../img/post4.jpg) no-repeat center/cover;  
+}
+
+.post-content {
+  margin: 20px;
+}
+
+article:not(:first-child) .post-content {
+  width: 40.2%;
+}
+
+article:first-child .post-content {
+  width: 90%;
+}
+
+.post-title {
+  cursor: pointer;
+}
+
+.post-title:hover {
+  opacity: 0.7;
+}
+
+.post-date {
+  position: absolute;  
+  color: rgba(192, 192, 192, 0.9);  
+}
+
+article:nth-child(even) .post-date {
+  top: 10px;  
+  right: calc(100% - 50px);
+}
+
+article:not(:first-child):nth-child(odd) .post-date {
+  top: 10px;
+  right: 10px;
+}
+
+article:first-child .post-date {
+  right: 10px;
+  padding-top: 10px;
+}
+
+.post-date-day {
+  font-size: 40px;
+}
+
+.post-date-day,
+.post-date-month {  
+  margin: 0;
+  line-height: 1.2em;
+  text-align: center; 
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #024161; 
+  margin-top: 14px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-left {
+  margin-left: 20px;   
+}
+
+.footer-right {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1030px) {
+
+  .news-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+
+  h2,
+  .post-date-day {
+    font-size: 30px;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
+  article:not(:first-child) .post-content {
+    width: 39.9%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  h2,
+  .post-date-day {
+    font-size: 40px;
+  }
+
+  .header-menu {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    flex-direction: column;    
+    align-items: center;
+  }
+
+  .header-menu-nav {
+    display: none;
+  }
+
+  .menu-hamburger {
+    display: block;    
+  }
+
+  .header-menu-logo {
+    font-size: 36px;
+  }
+
+  .header-post {
+    width: 88%;
+  }  
+
+  .content-left-side {
+    width: 65%;
+  }
+
+  .content-right-side {
+    width: 35%;
+  }
+
+  .content-left-side article:nth-child(even),
+  .content-left-side article:nth-child(odd) {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  article:not(:first-child) .post-content {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 240px;
+  }
+
+  article[class^=post]:not(:first-child) .post-title {
+    width: 85%;
+  }
+  
+  article:nth-child(even) .post-date,
+  article:not(:first-child):nth-child(odd) .post-date {
+    top: 250px;  
+  }
+
+  article:nth-child(even) .post-date {
+    top: 250px;
+    right: 10px;    
+  }  
+
+  article[class^=post]:first-child {
+    padding-bottom: 80px;
+  }
+
+  article:first-child .post-date {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);    
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: 0;
+  }
+
+  footer p {
+    text-align: center;
+  }  
+}
+
+@media screen and (max-width: 480px) {
+
+  body {
+    padding: 0 10px 10px;
+  }
+
+  .content {    
+    flex-direction: column-reverse;
+  }
+
+  .content-right-side,
+  .content-left-side {
+    width: 100%;
+  }
+
+  .content-right-side {
+    margin-left: 0;
+  }
+
+  .news-title {
+    font-weight: normal;
+  }
+}
