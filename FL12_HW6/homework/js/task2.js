@@ -1,6 +1,6 @@
-let a = prompt("Enter 'a':"),
-    b = prompt("Enter 'b':"),
-    c = prompt("Enter 'c':");
+let a = prompt('Enter "a":'),
+    b = prompt('Enter "b":'),
+    c = prompt('Enter "c":');
 
 if (a === '' || b === '' || c === '' || a === null || b === null || c === null) {
     console.log('input values should be ONLY numbers');
