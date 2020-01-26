@@ -1,0 +1,47 @@
+/* Todo: your styles go here*/
+
+ul {
+    list-style-type: none;    
+}
+
+li {
+    width: 100%;
+    margin: 0 0 4px 0;
+}
+
+p {
+    margin: 0;
+    transition: ease-in 0.3s;
+}
+
+.hide:nth-child(n) {
+    display: none;
+}
+
+p:hover {
+    cursor: pointer;
+}
+
+.folder:hover,
+.file:hover {
+    background-color: #EFEFEF;
+}
+
+i {
+    vertical-align: middle;
+    color: #EDBC0B;
+    margin-right: 10px;    
+}
+
+.folder i {
+    color: #EDBC0B;
+}
+
+.file i {
+    color: #BBBBBB;
+}
+
+.empty-list {
+    padding-left: 6px;
+    font-style: italic;
+}
