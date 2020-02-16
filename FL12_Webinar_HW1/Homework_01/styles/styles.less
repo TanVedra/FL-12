@@ -1,0 +1,59 @@
+@import "variables.less";
+
+.main,
+.description,
+.classes {
+    &__title {
+        &--text {
+            .blue-text();
+        }
+        &--underline {
+            .blue-underline();
+        }
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            transition: all ease 0.3s;
+            &:hover {
+                background-color: @blue;
+                color: @white;
+            }
+        }
+    }
+}
+
+.photo {
+    &__content {
+        border-style: solid;
+        border-width: 2px;
+
+        &--red {
+            border-color: @red;
+            background-color: @red;
+        }
+
+        &--blue {
+            border-color: @blue;
+            background-color: @blue;
+        }
+
+        &--orange {
+            border-color: @orange;
+            background-color: @orange;
+        }
+
+        &--green {
+            border-color: @green;
+            background-color: @green;
+        }
+    }
+}
+
+.footer {
+    &--appearance {
+        background-color: @grey;
+    }
+}
