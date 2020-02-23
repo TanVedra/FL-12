@@ -18,7 +18,10 @@ class Deck {
     }
 
     shuffle() {
-        this.cards.sort(() => Math.random() - 0.5);
+        for (let i = this.cards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+        }
     }
 
     draw(n) {
@@ -48,19 +51,18 @@ class Card {
     }
 
     static Compare(cardOne, cardTwo) {
-        return cardOne.rank > cardTwo.rank ? true : false;
+        return cardOne.rank === cardTwo.rank ? 0 : cardOne.rank > cardTwo.rank ? 1 : 2;
     }
 }
 
 class Player {
-    _wins = 0;
     constructor(name) {
         this.name = name;
         this.deck = new Deck();
     }
 
     get wins() {
-        return this._wins;
+        return this._wins || 0;
     }
 
     static Play(playerOne, playerTwo) {
@@ -74,9 +76,9 @@ class Player {
 
         while (playerOne.deck.count) {
             let result = Card.Compare(playerOne.deck.cards[playerOne.deck.cards.length - 1], playerTwo.deck.cards[playerTwo.deck.cards.length - 1]);
-            if (result) {
+            if (result === 1) {
                 playerOne._wins++;
-            } else {
+            } else if (result === 2) {
                 playerTwo._wins++;
             }
             playerOne.deck.draw(1);
@@ -92,6 +94,8 @@ ${playerOne.name}'s score: ${playerOne.wins}
 ${playerTwo.name}'s score: ${playerTwo.wins}
             `;
         }
+        delete playerOne._wins;
+        delete playerTwo._wins;
         console.log(message);
     }
 }
