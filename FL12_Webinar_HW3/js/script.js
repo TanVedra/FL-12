@@ -47,7 +47,7 @@ class Card {
     }
 
     toString() {
-        this.isFaceCard ? console.log(`${Card.faceCards[this.rank]} of ${this.suit}`) : console.log(`${this.rank} of ${this.suit}`);
+        return this.isFaceCard ? `${Card.faceCards[this.rank]} of ${this.suit}` : `${this.rank} of ${this.suit}`;
     }
 
     static Compare(cardOne, cardTwo) {
@@ -78,8 +78,12 @@ class Player {
             let result = Card.Compare(playerOne.deck.cards[playerOne.deck.cards.length - 1], playerTwo.deck.cards[playerTwo.deck.cards.length - 1]);
             if (result === 1) {
                 playerOne._wins++;
+                console.log(`${playerOne.name}'s ${playerOne.deck.cards[playerOne.deck.cards.length - 1].toString()} beats ${playerTwo.name}'s ${playerTwo.deck.cards[playerTwo.deck.cards.length - 1].toString()}`);
             } else if (result === 2) {
                 playerTwo._wins++;
+                console.log(`${playerTwo.name}'s ${playerTwo.deck.cards[playerTwo.deck.cards.length - 1].toString()} beats ${playerOne.name}'s ${playerOne.deck.cards[playerOne.deck.cards.length - 1].toString()}`);
+            } else if (result === 0) {
+                console.log(`${playerOne.name}'s ${playerOne.deck.cards[playerOne.deck.cards.length - 1].toString()} is equal to ${playerTwo.name}'s ${playerTwo.deck.cards[playerTwo.deck.cards.length - 1].toString()}`);
             }
             playerOne.deck.draw(1);
             playerTwo.deck.draw(1);
@@ -110,12 +114,6 @@ Player.Play(player1, player2);
 
 class Employee {
     static EMPLOYEES = [];
-    static AddEmployee(person) {
-        Employee.EMPLOYEES.push(person);
-    }
-
-    run = (Employee.AddEmployee)(this);
-
     constructor(options) {
         this.id = options.id;
         this.firstName = options.firstName;
@@ -124,7 +122,7 @@ class Employee {
         this.salary = options.salary;
         this.department = options.department;
         this.position = options.position;
-        delete this.run;
+        Employee.EMPLOYEES.push(this);
     }
 
     get EMPLOYEES() {
