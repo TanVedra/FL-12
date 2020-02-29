@@ -1,0 +1,105 @@
+body {
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+form {
+    border: 1px solid blueviolet;
+    border-radius: 20px;    
+    text-align: center;  
+    position: relative;
+    width: 380px;
+    margin: 10px auto;
+}
+
+form>h3, article>h3 {
+    color: green;
+}
+
+h3+h4 {
+    color: brown;
+}
+
+h4+p {
+    font-size: 14px;
+    color: white;
+    background-color: grey;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+h3:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+div {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid blue;
+    color: red;
+    text-indent: 6px;
+}
+
+button {
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-right: 6px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.edit {
+    background-color: orange;
+}
+
+.delete {
+    background-color: red;
+}
+
+article {    
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: bisque;
+    padding: 10px;
+}
+
+.wrapper>h4 {
+    color: blue;
+}
+
+span {
+    display: block;
+    color: red;
+}
+
+.text {
+    background-color: green;
+    color: rgb(210, 252, 126);
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.gif-loader {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
