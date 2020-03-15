@@ -1,0 +1,15 @@
+.main-page {
+    background-color: #F0F0F4;
+    padding: 100px 0;
+    width: 100%;    
+}
+
+.main-page>div {
+    width: 80%;
+    margin: 0 auto;    
+}
+
+.main-page>div:first-child {
+    display: flex;
+    justify-content: space-between;
+}

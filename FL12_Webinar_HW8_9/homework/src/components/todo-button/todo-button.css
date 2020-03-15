@@ -1,0 +1,32 @@
+.todo-button-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+
+.todo-button-content {
+    position: absolute;
+    z-index: 10;    
+    top: 100%;
+    width: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 #000;
+    background-color: #fff;
+}
+
+.todo-button-content>div {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.todo-button {
+    cursor: pointer;
+}
+
+img {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
