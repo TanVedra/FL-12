@@ -1,0 +1,18 @@
+.output,
+.output2,
+.output3,
+.output4 {
+    border: 2px solid green;
+    width: 60%;
+    height: 30vh;    
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.manager {
+    color: red;
+}
+
+.developer {
+    color: yellowgreen;
+}
