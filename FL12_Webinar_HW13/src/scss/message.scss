@@ -1,0 +1,59 @@
+.winning-message {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  
+  .winning-message button,
+  #new-game,
+  #reset-game {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    margin: .25em 0;
+    cursor: pointer;
+  }
+  
+  .winning-message button:hover,
+  #new-game:hover,
+  #reset-game:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+  
+  .winning-message.hide {
+    display: none;
+  }
+  
+  #score {
+    color: red;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+
+  #score>div:first-child {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  } 
+  
+  .buttons {
+    margin-left: 40px;
+  }
+
+  #new-game,
+  #reset-game {
+    font-size: 20px;
+    margin: 10px 10px;
+    padding: 4px 10px;
+  }
